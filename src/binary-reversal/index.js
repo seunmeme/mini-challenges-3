@@ -5,11 +5,7 @@
  */
 function binaryReversal(value) {
 
-  let binaryValue = Number(value).toString(2);
-
-  while (binaryValue.length < 8) {
-    binaryValue = '0' + binaryValue;
-  }
+  const binaryValue = Number(value).toString(2).padStart(8, "0");
 
   return parseInt(binaryValue.split('').reverse().join(''), 2).toString();
 
